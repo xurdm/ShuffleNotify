@@ -30,8 +30,10 @@
         {
             btnStartTracking = new Button();
             lblStatus = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pbScreenshot = new PictureBox();
+            btnStopTracking = new Button();
+            lblText = new Label();
+            ((System.ComponentModel.ISupportInitialize)pbScreenshot).BeginInit();
             SuspendLayout();
             // 
             // btnStartTracking
@@ -40,7 +42,7 @@
             btnStartTracking.Name = "btnStartTracking";
             btnStartTracking.Size = new Size(75, 23);
             btnStartTracking.TabIndex = 0;
-            btnStartTracking.Text = "button1";
+            btnStartTracking.Text = "Start";
             btnStartTracking.UseVisualStyleBackColor = true;
             btnStartTracking.Click += btnStartTracking_Click;
             // 
@@ -53,25 +55,47 @@
             lblStatus.TabIndex = 1;
             lblStatus.Text = "label1";
             // 
-            // pictureBox1
+            // pbScreenshot
             // 
-            pictureBox1.Location = new Point(193, 76);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(601, 434);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            pbScreenshot.Location = new Point(194, 96);
+            pbScreenshot.Name = "pbScreenshot";
+            pbScreenshot.Size = new Size(600, 405);
+            pbScreenshot.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbScreenshot.TabIndex = 2;
+            pbScreenshot.TabStop = false;
+            // 
+            // btnStopTracking
+            // 
+            btnStopTracking.Location = new Point(93, 51);
+            btnStopTracking.Name = "btnStopTracking";
+            btnStopTracking.Size = new Size(75, 23);
+            btnStopTracking.TabIndex = 3;
+            btnStopTracking.Text = "Stop";
+            btnStopTracking.UseVisualStyleBackColor = true;
+            btnStopTracking.Click += btnStopTracking_Click;
+            // 
+            // lblText
+            // 
+            lblText.Location = new Point(12, 96);
+            lblText.Name = "lblText";
+            lblText.Size = new Size(176, 405);
+            lblText.TabIndex = 4;
+            lblText.Text = "label1";
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(806, 510);
-            Controls.Add(pictureBox1);
+            Controls.Add(lblText);
+            Controls.Add(btnStopTracking);
+            Controls.Add(pbScreenshot);
             Controls.Add(lblStatus);
             Controls.Add(btnStartTracking);
             Name = "Main";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbScreenshot).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -80,6 +104,8 @@
 
         private Button btnStartTracking;
         private Label lblStatus;
-        private PictureBox pictureBox1;
+        private PictureBox pbScreenshot;
+        private Button btnStopTracking;
+        private Label lblText;
     }
 }
